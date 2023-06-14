@@ -68,7 +68,7 @@ pub(crate) fn create(editor_data: Data, editor_state: Arc<ViziaState>) -> Option
         assets::register_noto_sans_light(cx);
         assets::register_noto_sans_thin(cx);
 
-        cx.add_theme(include_str!("editor/theme.css"));
+        cx.add_stylesheet(include_str!("editor/theme.css"));
 
         editor_data.clone().build(cx);
 
@@ -139,7 +139,7 @@ fn spectrum_analyzer(cx: &mut Context) {
             // HACK: Rotating doesn't really work in vizia, but with text wrap disabled this at
             //       least visually does the right thing
             .text_wrap(false)
-            .rotate(270.0f32)
+            .rotate(Angle::Deg(270.0))
             .width(Pixels(LABEL_HEIGHT))
             .height(Pixels(SPECTRUM_ANALYZER_HEIGHT))
             // HACK: The `.space()` on the HStack doesn't seem to work correctly here
