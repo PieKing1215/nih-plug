@@ -544,7 +544,7 @@ impl View for ParamSlider {
                             util::remap_current_entity_x_t(cx, granular_drag_status.starting_value);
                         let delta_x = ((*x - granular_drag_status.starting_x_coordinate)
                             * GRANULAR_DRAG_MULTIPLIER)
-                            * cx.scale_factor() as f32;
+                            * cx.scale_factor();
 
                         self.set_normalized_value_drag(
                             cx,

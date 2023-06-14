@@ -68,7 +68,7 @@ pub(crate) fn create(editor_data: Data, editor_state: Arc<ViziaState>) -> Option
         assets::register_noto_sans_light(cx);
         assets::register_noto_sans_thin(cx);
 
-        cx.add_stylesheet(include_str!("editor/theme.css"));
+        cx.add_stylesheet(include_str!("editor/theme.css")).unwrap();
 
         editor_data.clone().build(cx);
 

@@ -55,8 +55,8 @@ impl View for ResizeHandle {
                     self.start_scale_factor = cx.user_scale_factor();
                     self.start_dpi_factor = cx.scale_factor() as f64;
                     self.start_physical_coordinates = (
-                        cx.mouse().cursorx * cx.scale_factor() as f32,
-                        cx.mouse().cursory * cx.scale_factor() as f32,
+                        cx.mouse().cursorx * cx.scale_factor(),
+                        cx.mouse().cursory * cx.scale_factor(),
                     );
 
                     meta.consume();

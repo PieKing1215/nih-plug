@@ -140,7 +140,7 @@ fn draw_spectrum(
 ) {
     let bounds = cx.bounds();
 
-    let line_width = cx.scale_factor() as f32 * 1.5;
+    let line_width = cx.scale_factor() * 1.5;
     let text_color: vg::Color = cx.font_color().into();
     // This is used to draw the individual bars
     let bars_paint = vg::Paint::color(text_color).with_line_width(line_width);
@@ -261,7 +261,7 @@ fn draw_spectrum(
 fn draw_threshold_curve(cx: &mut DrawContext, canvas: &mut Canvas, analyzer_data: &AnalyzerData) {
     let bounds = cx.bounds();
 
-    let line_width = cx.scale_factor() as f32 * 3.0;
+    let line_width = cx.scale_factor() * 3.0;
     let downwards_paint =
         vg::Paint::color(DOWNWARDS_THRESHOLD_CURVE_COLOR).with_line_width(line_width);
     let upwards_paint = vg::Paint::color(UPWARDS_THRESHOLD_CURVE_COLOR).with_line_width(line_width);

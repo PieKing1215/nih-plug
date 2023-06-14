@@ -374,7 +374,7 @@ impl XyPad {
         let relative_y = cx.mouse().cursory - bounds.y;
 
         // These positions need to take DPI scaling into account
-        let dpi_scale = cx.scale_factor() as f32;
+        let dpi_scale = cx.scale_factor();
         let padding = 2.0 * dpi_scale;
 
         // If there's not enough space at the top right, we'll move the tooltip to the
@@ -541,7 +541,7 @@ impl View for XyPad {
                 self.update_tooltip_pos(cx);
 
                 if self.drag_active {
-                    let dpi_scale = cx.scale_factor() as f32;
+                    let dpi_scale = cx.scale_factor();
 
                     if cx.modifiers().shift() {
                         // If shift is being held then the drag should be more granular instead of

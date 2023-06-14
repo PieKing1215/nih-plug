@@ -21,12 +21,12 @@ pub const ROBOTO_BOLD: &str = "Roboto Bold";
 /// first.
 pub const ICONS: &str = "Tabler Icons";
 
-pub fn register_roboto(cx: &mut Context) {
+pub fn register_roboto(_cx: &mut Context) {
     // cx.add_fonts_mem(&[fonts::ROBOTO_REGULAR]);
 }
-pub fn register_roboto_bold(cx: &mut Context) {
+pub fn register_roboto_bold(_cx: &mut Context) {
     // cx.add_fonts_mem(&[fonts::ROBOTO_BOLD]);
 }
-pub fn register_icons(cx: &mut Context) {
+pub fn register_icons(_cx: &mut Context) {
     // cx.add_fonts_mem(&[fonts::TABLER_ICONS]);
 }

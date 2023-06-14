@@ -97,9 +97,9 @@ impl PeakMeter {
                         }
 
                         let font_size = {
-                            let current = cx.current();
-                            let ev = EventContext::new(cx);
                             // TODO: vizia: DrawContext::new is gone, not sure how to do this now
+                            // let current = cx.current();
+                            // let ev = EventContext::new(cx);
                             // let draw_cx = DrawContext::new(cx);
                             // draw_cx.font_size(current) * ev.scale_factor() as f32
                             15.0
